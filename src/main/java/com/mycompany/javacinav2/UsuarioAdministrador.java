@@ -1,29 +1,14 @@
 package com.mycompany.javacinav2;
 
+//Criacao da classe UsuarioAdministrador com heranca da classe Usuario
 public class UsuarioAdministrador extends Usuario {
-    
-    public void CriaUsuarioAdm(){
-    
+
+    public UsuarioAdministrador(String nome, String email, String usuario, String senha, String permissao) {
+        super(nome, email, usuario, senha, permissao);
     }
-    public void CriarUsuarioAtendente(){
-    
-    }
-    public void RemoverUsuarioAdm(){
-        
-    }
-    public void RemoverUsuarioAtendente(){
-    
-    }
-    public void AtualizarUsuarioAdm(){
-    
-    }
-    public void AtualizarUsuarioAtendente(){
-    
-    }
-    public void CadastrarPessoasFila(){
-    
-    }
-    public void GerarRelatorio(){
-    
+
+
+    public UsuarioAdministrador(int codigo, String nome, String email, String usuario, String senha, String permissao){
+        super(codigo, nome, email, usuario, senha, permissao);
     }
 }

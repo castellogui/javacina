@@ -1,8 +1,9 @@
-
-package com.mycompany.JavacinaV2;
+package com.mycompany.javacinav2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import javax.swing.JOptionPane;
+
 
 
 public class ConnectionFactory {
@@ -10,7 +11,8 @@ public class ConnectionFactory {
     private String senha = "@Usuario10.";
     private String host = "localhost";
     private String porta = "3306";
-    private String db = "db_Pessoas";
+    private String db = "db_javacina";
+    
 
     
     public Connection getConexao(){
@@ -19,8 +21,10 @@ public class ConnectionFactory {
             return c;
         }   
         catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Erro de conexão.");
             e.printStackTrace();
             return null;
         }
     }
+    
 }
